@@ -4,7 +4,11 @@ const ProfileCard = () => {
   return (
     <div className="profile">
       <div className="profile__upper">
-        <img src={profilePicture} alt="Jeremy Robinsons Picture" />
+        <img
+          className="profile__picture"
+          src={profilePicture}
+          alt="Jeremy Robinsons Picture"
+        />
       </div>
     </div>
   );
