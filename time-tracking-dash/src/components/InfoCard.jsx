@@ -6,8 +6,11 @@ import selfCare from '../assets/images/icon-self-care.svg';
 import social from '../assets/images/icon-social.svg';
 import study from '../assets/images/icon-study.svg';
 import work from '../assets/images/icon-work.svg';
+import { useTimeframeValue } from './TimeframeContext';
 
 const InfoCard = ({ data }) => {
+  const state = useTimeframeValue();
+
   const bgImages = {
     exercise: exercise,
     play: play,
@@ -26,24 +29,24 @@ const InfoCard = ({ data }) => {
 
   return (
     <div className={cardAccent}>
-      <span className='info__image-container'>
-        <img className='info__image' src={image} alt='kajshdf;lkja' />
+      <span className="info__image-container">
+        <img className="info__image" src={image} alt="kajshdf;lkja" />
       </span>
-      <div className='info__fg'>
-        <span className='info__header'>
-          <p className='info__title'>{data.title}</p>
+      <div className="info__fg">
+        <span className="info__header">
+          <p className="info__title">{data.title}</p>
           <img
             src={ellipsis}
-            alt='three dots - ellipsis'
-            className='ellipsis'
+            alt="three dots - ellipsis"
+            className="ellipsis"
           />
         </span>
-        <div className='info__fg-stat-container'>
-          <p className='info__fg-current'>
-            {data.timeframes.weekly.current}hrs
+        <div className="info__fg-stat-container">
+          <p className="info__fg-current">
+            {data.timeframes[state].current}hrs
           </p>
-          <p className='light-font'>
-            Last week - {data.timeframes.weekly.previous}hrs
+          <p className="light-font">
+            Last week - {data.timeframes[state].previous}hrs
           </p>
         </div>
       </div>
