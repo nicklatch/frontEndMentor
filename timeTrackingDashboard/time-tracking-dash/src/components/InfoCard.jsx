@@ -32,12 +32,20 @@ const InfoCard = ({ data }) => {
     <div className={cardAccent}>
       <div className="info__bg">
         <div className="info__fg">
-          <span className="info__title">
-            {data.title}
-            <img src={ellipsis} alt="ellipsis" />
+          <span className="info__header">
+            <p className="info__title">{data.title}</p>
+            <img
+              src={ellipsis}
+              alt="three dots - ellipsis"
+              className="ellipsis"
+            />
           </span>
-          <div>{data.timeframes.weekly.current}hrs</div>
-          <div>Last week - {data.timeframes.weekly.previous}</div>
+          <p className="info__fg--current">
+            {data.timeframes.weekly.current}hrs
+          </p>
+          <p className="info__fg--previous">
+            Last week - {data.timeframes.weekly.previous}
+          </p>
         </div>
       </div>
     </div>

@@ -8,8 +8,10 @@ const App = () => {
   const [userData, dataService] = useResource('data');
 
   useEffect(() => {
-    dataService.getAll();
-  }, []);
+    if (!userData) {
+      dataService.getAll();
+    }
+  }, [userData]);
 
   console.log(userData);
 

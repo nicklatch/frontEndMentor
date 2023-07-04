@@ -1,5 +1,7 @@
 :root {
-  font-family: 'Rubik', sans-serif;
+  --font-family: 'Rubik', sans-serif;
+
+  font-family: var(--font-family);
   line-height: 1.5;
 
   color: rgba(255, 255, 255, 0.87);
@@ -42,7 +44,7 @@ body {
   height: 100%;
 }
 
-.dashboard {
+.dashboard-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -91,9 +93,28 @@ body {
   width: 100%;
 }
 
-.info__title {
+.info__header {
   display: flex;
   justify-content: space-between;
+  font-size: 18px;
+}
+
+.info__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ellipsis {
+  height: 4px;
+}
+
+.info__fg--current {
+  font-size: 56px;
+  font-weight: 300;
+}
+
+.info__fg--previous {
+  font-size: 16px;
 }
 
 .info__bg {
