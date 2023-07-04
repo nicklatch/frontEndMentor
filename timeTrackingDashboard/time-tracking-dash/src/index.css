@@ -108,12 +108,12 @@ body {
   height: 4px;
 }
 
-.info__fg--current {
+.info__fg-current {
   font-size: 56px;
   font-weight: 300;
 }
 
-.info__fg--previous {
+.info__fg-previous {
   font-size: 16px;
 }
 
