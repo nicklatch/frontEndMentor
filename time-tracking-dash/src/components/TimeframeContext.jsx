@@ -3,17 +3,13 @@
 import { createContext, useContext, useReducer } from 'react';
 
 const timeframeReducer = (state, action) => {
-  console.log('state: ', state);
   switch (action.type) {
     case 'DAILY':
-      console.log(action.type);
-      return 'daily';
+      return action.type.toLowerCase();
     case 'WEEKLY':
-      console.log(action.type);
-      return 'weekly';
+      return action.type.toLowerCase();
     case 'MONTHLY':
-      console.log(action.type);
-      return 'monthly';
+      return action.type.toLowerCase();
     default:
       return state;
   }
