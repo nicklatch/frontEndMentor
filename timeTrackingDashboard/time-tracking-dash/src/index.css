@@ -2,7 +2,6 @@
   font-family: 'Rubik', sans-serif;
   line-height: 1.5;
 
-  /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
   background-color: hsl(226, 43%, 10%);
 
@@ -11,6 +10,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --card-bg-work: hsl(15, 100%, 70%);
+  --card-bg-play: hsl(195, 74%, 62%);
+  --card-bg-study: hsl(348, 100%, 68%);
+  --card-bg-exercise: hsl(145, 58%, 55%);
+  --card-bg-social: hsl(264, 64%, 52%);
+  --card-bg-self-care: hsl(43, 84%, 65%);
+  --card-bg-very-dark-blue: hsl(235, 46%, 20%);
+  --card-bg-dark-blue: hsl(235, 46%, 20%);
+  --profile--purple: hsl(246, 80%, 60%);
 }
 
 html {
@@ -41,16 +50,17 @@ body {
 
 .profile {
   display: flex;
-  background-color: hsl(235, 46%, 20%);
+  flex-direction: column;
+  background-color: var(--card-bg-dark-blue);
   grid-column: 1;
   grid-row: 1 / span 2;
   border-radius: 1rem;
-  
+  max-width: 100%;
 }
 
 .profile__upper {
   width: 100%;
-  background-color: hsl(246, 80%, 60%);
+  background-color: var(--profile--purple);
   height: 75%;
   border-radius: 1rem;
 }
@@ -60,12 +70,32 @@ body {
   width: auto;
   border-radius: 50%;
   border: 0.25rem solid white;
+  margin: 1.5rem;
 }
 
 .info {
   display: flex;
-  height: 100%;
-  width: auto;
+  width: 100%;
   aspect-ratio: 1;
-  background-color: hsl(235, 46%, 20%);
+  border-radius: 1.15rem;
+}
+
+.info--orange {
+  background: var(--card-bg-work);
+}
+
+.info__fg {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.75rem;
+  height: 90%;
+  width: 100%;
+}
+
+.info__bg {
+  background-color: var(--card-bg-dark-blue);
+  height: 85%;
+  width: 100%;
+  align-self: flex-end;
+  border-radius: 1rem;
 }

@@ -9,7 +9,16 @@ const ProfileCard = () => {
           src={profilePicture}
           alt="Jeremy Robinsons Picture"
         />
+        <h5>Report for</h5>
+        <h3>
+          Jeremy
+          <br />
+          Robinson
+        </h3>
       </div>
+      <div>Daily</div>
+      <div>Weekly</div>
+      <div>Monthly</div>
     </div>
   );
 };
