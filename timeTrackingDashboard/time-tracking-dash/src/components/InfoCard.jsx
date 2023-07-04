@@ -2,7 +2,6 @@ import ellipsis from '../assets/images/icon-ellipsis.svg';
 
 const InfoCard = ({ data }) => {
   let color;
-  const cardAccent = `info info--${color}`;
 
   switch (data.title) {
     case 'Work':
@@ -27,17 +26,19 @@ const InfoCard = ({ data }) => {
       color = 'white';
   }
 
+  const cardAccent = `info info--${color}`;
+
   return (
-    <div className="info info--orange">
+    <div className={cardAccent}>
       <div className="info__bg">
         <div className="info__fg">
-          <span>{data.title}</span>
-          <span>
+          <span className="info__title">
+            {data.title}
             <img src={ellipsis} alt="ellipsis" />
           </span>
+          <div>{data.timeframes.weekly.current}hrs</div>
+          <div>Last week - {data.timeframes.weekly.previous}</div>
         </div>
-        <div>{data.timeframes.weekly.current}hrs</div>
-        <div>Last week - {data.timeframes.weekly.previous}</div>
       </div>
     </div>
   );

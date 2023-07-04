@@ -56,6 +56,8 @@ body {
   grid-row: 1 / span 2;
   border-radius: 1rem;
   max-width: 100%;
+  aspect-ratio: 0.5;
+  height: 100%;
 }
 
 .profile__upper {
@@ -63,6 +65,7 @@ body {
   background-color: var(--profile--purple);
   height: 75%;
   border-radius: 1rem;
+  padding: 1.5rem;
 }
 
 .profile__picture {
@@ -70,7 +73,6 @@ body {
   width: auto;
   border-radius: 50%;
   border: 0.25rem solid white;
-  margin: 1.5rem;
 }
 
 .info {
@@ -80,16 +82,18 @@ body {
   border-radius: 1.15rem;
 }
 
-.info--orange {
-  background: var(--card-bg-work);
-}
-
 .info__fg {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 1.75rem;
   height: 90%;
   width: 100%;
+}
+
+.info__title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .info__bg {
@@ -98,4 +102,27 @@ body {
   width: 100%;
   align-self: flex-end;
   border-radius: 1rem;
+}
+.info--work {
+  background: var(--card-bg-work);
+}
+
+.info--play {
+  background-color: var(--card-bg-play);
+}
+
+.info--study {
+  background-color: var(--card-bg-study);
+}
+
+.info--exercise {
+  background-color: var(--card-bg-exercise);
+}
+
+.info--social {
+  background-color: var(--card-bg-social);
+}
+
+.info--self-care {
+  background-color: var(--card-bg-self-care);
 }
