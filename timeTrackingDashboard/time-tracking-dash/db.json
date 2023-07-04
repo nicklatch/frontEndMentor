@@ -2,6 +2,7 @@
   "data": [
     {
       "title": "Work",
+      "icon": "",
       "timeframes": {
         "daily": {
           "current": 5,

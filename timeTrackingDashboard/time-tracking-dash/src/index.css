@@ -44,6 +44,11 @@ body {
   height: 100%;
 }
 
+li {
+  all: unset;
+  padding-block: 0.5rem;
+}
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -58,8 +63,8 @@ body {
   grid-row: 1 / span 2;
   border-radius: 1rem;
   max-width: 100%;
-  aspect-ratio: 0.5;
   height: 100%;
+  aspect-ratio: 0.5;
 }
 
 .profile__upper {
@@ -75,11 +80,27 @@ body {
   width: auto;
   border-radius: 50%;
   border: 0.25rem solid white;
+  margin-bottom: 2.2rem;
+}
+
+.profile__name {
+  all: unset;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.profile__timeframes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1.25rem;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .info {
   display: flex;
-  width: 100%;
   aspect-ratio: 1;
   border-radius: 1.15rem;
 }
@@ -109,7 +130,7 @@ body {
 }
 
 .info__fg-current {
-  font-size: 56px;
+  font-size: 62px;
   font-weight: 300;
 }
 

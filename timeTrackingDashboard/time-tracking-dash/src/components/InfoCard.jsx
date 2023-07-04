@@ -1,7 +1,6 @@
 import ellipsis from '../assets/images/icon-ellipsis.svg';
 
 const InfoCard = ({ data }) => {
-
   const color =
     data.title !== 'Self Care' ? data.title.toLowerCase() : 'self-care';
 
@@ -23,7 +22,7 @@ const InfoCard = ({ data }) => {
             {data.timeframes.weekly.current}hrs
           </p>
           <p className="info__fg-previous">
-            Last week - {data.timeframes.weekly.previous}
+            Last week - {data.timeframes.weekly.previous}hrs
           </p>
         </div>
       </div>

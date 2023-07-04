@@ -10,15 +10,17 @@ const ProfileCard = () => {
           alt="Jeremy Robinsons Picture"
         />
         <h5>Report for</h5>
-        <h3>
+        <h3 className="profile__name">
           Jeremy
           <br />
           Robinson
         </h3>
       </div>
-      <div>Daily</div>
-      <div>Weekly</div>
-      <div>Monthly</div>
+      <ul className="profile__timeframes">
+        <li>Daily</li>
+        <li>Weekly</li>
+        <li>Monthly</li>
+      </ul>
     </div>
   );
 };
