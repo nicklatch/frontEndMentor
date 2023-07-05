@@ -1,6 +1,16 @@
+import { useTimeframeDispatch, useTimeframeValue } from './TimeframeContext';
 import profilePicture from '../assets/images/image-jeremy.png';
 
 const ProfileCard = () => {
+  const dispatch = useTimeframeDispatch();
+  // const state = useTimeframeValue();
+
+  //! left off here
+
+  const handleClick = (e) => {
+    dispatch({ type: e.target.value });
+  };
+
   return (
     <div className='profile'>
       <div className='profile__upper'>
@@ -15,9 +25,30 @@ const ProfileCard = () => {
         </span>
       </div>
       <nav className='profile__timeframes'>
-        <a href='/daily'>Daily</a>
-        <a href='/weekly'>Weekly</a>
-        <a href='/monthly'>Monthly</a>
+        <button
+          id='dailyButton'
+          value='DAILY'
+          type='button'
+          onClick={handleClick}
+        >
+          Daily
+        </button>
+        <button
+          id='weeklyButton'
+          value='WEEKLY'
+          type='button'
+          onClick={handleClick}
+        >
+          Weekly
+        </button>
+        <button
+          id='monthlyButton'
+          value='MONTLY'
+          type='button'
+          onClick={handleClick}
+        >
+          Monthly
+        </button>
       </nav>
     </div>
   );
