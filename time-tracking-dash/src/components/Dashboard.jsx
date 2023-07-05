@@ -13,8 +13,6 @@ const Dashboard = () => {
     }
   }, [userData]);
 
-  console.log(userData);
-
   return !userData ? (
     <div>loading</div>
   ) : (
