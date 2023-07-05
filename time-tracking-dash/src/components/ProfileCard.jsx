@@ -9,12 +9,10 @@ const ProfileCard = () => {
           src={profilePicture}
           alt='Jeremy Robinsons Picture'
         />
-        <h5 className='light-font'>Report for</h5>
-        <h3 className='profile__name'>
-          Jeremy
-          <br />
-          Robinson
-        </h3>
+        <span>
+          <h5 className='light-font'>Report for</h5>
+          <h3 className='profile__name'>Jeremy Robinson</h3>
+        </span>
       </div>
       <nav className='profile__timeframes'>
         <a href='/daily'>Daily</a>

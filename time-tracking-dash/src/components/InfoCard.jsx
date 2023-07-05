@@ -38,10 +38,14 @@ const InfoCard = ({ data }) => {
             className='ellipsis'
           />
         </span>
-        <p className='info__fg-current'>{data.timeframes.weekly.current}hrs</p>
-        <p className='light-font'>
-          Last week - {data.timeframes.weekly.previous}hrs
-        </p>
+        <div className='info__fg-stat-container'>
+          <p className='info__fg-current'>
+            {data.timeframes.weekly.current}hrs
+          </p>
+          <p className='light-font'>
+            Last week - {data.timeframes.weekly.previous}hrs
+          </p>
+        </div>
       </div>
     </div>
   );
