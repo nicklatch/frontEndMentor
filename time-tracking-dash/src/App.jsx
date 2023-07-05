@@ -1,30 +1,9 @@
-import ProfileCard from './components/ProfileCard';
-import InfoCard from './components/InfoCard';
 import Dashboard from './components/Dashboard';
-import { useResource } from './hooks';
-import { useEffect } from 'react';
 
 const App = () => {
-  const [userData, dataService] = useResource('data');
-
-  useEffect(() => {
-    if (!userData) {
-      dataService.getAll();
-    }
-  }, [userData]);
-
-  console.log(userData);
-
-  return !userData ? (
-    <div>loading</div>
-  ) : (
+  return (
     <main>
-      <Dashboard>
-        <ProfileCard />
-        {userData.map((data) => (
-          <InfoCard key={data.title} data={data} />
-        ))}
-      </Dashboard>
+      <Dashboard />
     </main>
   );
 };
