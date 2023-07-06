@@ -46,9 +46,6 @@ img {
 body {
   min-height: 100vh;
   max-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 button {
@@ -56,6 +53,7 @@ button {
   cursor: pointer;
 }
 
+body,
 main {
   display: flex;
   justify-content: center;
@@ -76,16 +74,18 @@ button:visited {
 button:link:active,
 button:visited:active,
 button:hover,
+button:focus,
 .ellipsis:hover {
   color: white;
   opacity: 1;
 }
 
 .dashboard-grid {
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 1000px;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /*------------------Prof Card-----------------*/
@@ -262,13 +262,12 @@ button:hover,
   .dashboard-grid {
     display: flex;
     flex-direction: column;
-    max-width: 375px;
-    gap: 1.5rem;
+    max-width: 350px;
     margin: 1.5rem;
   }
 
   .profile__upper {
-    flex-direction: unset;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
