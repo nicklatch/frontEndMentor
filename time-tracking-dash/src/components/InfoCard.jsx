@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react';
 import ellipsis from '../assets/images/icon-ellipsis.svg';
 import { bgSvgs } from '../sevices/imageService';
 import { useTimeframeValue } from './TimeframeContext';
 
 const InfoCard = ({ data }) => {
+  const [timef, setTimef] = useState('weekly');
   const state = useTimeframeValue();
   const prevTimeData = [
     { daily: 'Yesterday' },
@@ -11,7 +13,10 @@ const InfoCard = ({ data }) => {
     { monthly: 'Last Month' },
   ];
 
-  const prevTime = Object.values(prevTimeData.find((obj) => obj[state]))[0];
+  useEffect(() => {
+    setTimef(Object.values(prevTimeData.find((obj) => obj[state]))[0]);
+  }, [state]);
+
   const category =
     data.title !== 'Self Care' ? data.title.toLowerCase() : 'self-care';
 
@@ -40,7 +45,7 @@ const InfoCard = ({ data }) => {
             {data.timeframes[state].current}hrs
           </p>
           <p className='light-font'>
-            {prevTime} - {data.timeframes[state].previous}hrs
+            {timef} - {data.timeframes[state].previous}hrs
           </p>
         </div>
       </div>

@@ -1,3 +1,5 @@
+@import 'open-props/style';
+
 :root {
   font-family: 'Rubik', sans-serif;
   line-height: 1.2;
@@ -254,6 +256,12 @@ button:focus,
 
 .selected {
   opacity: 1;
+}
+
+/* Animations */
+
+.slide-in-right {
+  animation: var(--animation-slide-in-right);
 }
 
 /* Media Queries */

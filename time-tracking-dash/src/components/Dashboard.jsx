@@ -17,7 +17,7 @@ const Dashboard = () => {
     <div>loading</div>
   ) : (
     <TimeframeContextProvider>
-      <div className='dashboard-grid'>
+      <div className='dashboard-grid slide-in-right'>
         {' '}
         <ProfileCard />
         {userData.map((data) => (
