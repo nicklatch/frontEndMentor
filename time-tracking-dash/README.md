@@ -12,8 +12,6 @@
     - [Useful resources](#useful-resources)
   - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ### The challenge
 
 Users should be able to:
@@ -37,8 +35,15 @@ Users should be able to:
   - Custom Props
   - Flexbox
   - CSS Grid
-- [React](https://reactjs.org/) - JS library
+- [React](https://reactjs.org/) - JS library (Overkill for this, but I need more practice with it)
+  - useContext
+  - createContext
+  - useReducer
+  - Custom Hook(s)
+  - and more!
 - [Vite](https://vitejs.dev) - Vite Build Tool
+- Axios - HTTP Client
+  - Not needed at all here since I'm just reading from static json. But, I may whip up a simple node server just for fun
 
 ### Continued development
 
@@ -48,8 +53,6 @@ I want and need to focus more on how to make my components for project agnostic/
 
 - [MDN](https://developer.mozilla.org/en-US/) - MDN is always one of my go-to's for explanations
 - [DevDocs](https://devdocs.io/) - I always have this open for a quick reference!
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
