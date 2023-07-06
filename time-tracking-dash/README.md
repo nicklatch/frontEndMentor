@@ -27,7 +27,8 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/nicklatch/frontEndMentor/tree/main/time-tracking-dash)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://front-end-mentor-780mty9gw-nicklatch.vercel.app/)
+  
 ### Built with
 
 - Semantic HTML5 markup
