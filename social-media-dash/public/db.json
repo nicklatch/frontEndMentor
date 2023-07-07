@@ -5,40 +5,40 @@
       "handle": "@nathanf",
       "totalFollowers": 1987,
       "newTodayFollowers": 12,
-      "overview": [
-        { "today": [{ "pageViews": 87 }, { "likes": 52 }] },
-        { "yesterday": [{ "pageViews": 84 }, { "likes": 54 }] }
-      ]
+      "overview": {
+        "today": { "pageViews": 87, "likes": 52 },
+        "yesterday": { "pageViews": 84, "likes": 54 }
+      }
     },
     {
       "platform": "twitter",
       "handle": "@nathanf",
       "totalFollowers": 1044,
       "newTodayFollowers": 99,
-      "overview": [
-        { "today": [{ "retweets": 117 }, { "likes": 507 }] },
-        { "yesterday": [{ "pageViews": 84 }, { "likes": 54 }] }
-      ]
+      "overview": {
+        "today": { "retweets": 117, "likes": 507 },
+        "yesterday": { "pageViews": 84, "likes": 54 }
+      }
     },
     {
       "platform": "instagram",
       "handle": "@realnathanf",
       "totalFollowers": 11000,
       "newTodayFollowers": 1099,
-      "overview": [
-        { "today": [{ "profileViews": 52000 }, { "likes": 5462 }] },
-        { "yesterday": [{ "pageViews": 84 }, { "likes": 54 }] }
-      ]
+      "overview": {
+        "today": { "profileViews": 52000, "likes": 5462 },
+        "yesterday": { "pageViews": 84, "likes": 54 }
+      }
     },
     {
       "platform": "youtube",
       "handle": "Nathan F.",
       "totalFollowers": 8239,
       "newTodayFollowers": -144,
-      "overview": [
-        { "today": [{ "totalViews": 1407 }, { "likes": 107 }] },
-        { "yesterday": [{ "pageViews": 84 }, { "likes": 54 }] }
-      ]
+      "overview": {
+        "today": { "totalViews": 1407, "likes": 107 },
+        "yesterday": { "pageViews": 84, "likes": 54 }
+      }
     }
   ]
 }
