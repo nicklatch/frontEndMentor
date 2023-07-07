@@ -1,11 +1,9 @@
 import TotalsCard from './TotalsCard';
 
-const TotalsDash = () => {
-  const cards = [1, 2, 3, 4];
-
+const TotalsDash = ({ data }) => {
   return (
-    <div className="totals__dash-grid">
-      {cards.map((card) => (
+    <div className='totals__dash-grid'>
+      {data.map((card) => (
         <TotalsCard key={card} data={card} />
       ))}
     </div>

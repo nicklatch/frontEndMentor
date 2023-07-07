@@ -1,14 +1,17 @@
 /* eslint-disable react/prop-types */
-import fbIcon from '../../assets/images/icon-facebook.svg';
+import { icons } from '../../utils';
 
-//! remove rule below when data gets piped
-// eslint-disable-next-line no-unused-vars
 const OverviewCard = ({ data }) => {
+  console.log('FROM: overviewcard', data);
   return (
-    <div className="overview__card">
+    <div className='overview__card card-rounded '>
       <section>
-        <p>Page Views</p>
-        <img src={fbIcon} />
+        <h4>Page Views</h4>
+        <img src={icons[data.platform]} alt={`${data.platform}'s logo`} />
+      </section>
+      <section>
+        <p>87</p>
+        <p>^3%</p>
       </section>
     </div>
   );
