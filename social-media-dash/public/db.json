@@ -1,0 +1,48 @@
+{
+  "nathanf": [
+    {
+      "platform": "facebook",
+      "totalFollowers": 1987,
+      "newTodayFollowers": 12,
+      "overview" : {
+        "today": {
+          "pageViews": 87,
+          "likes": 52
+        }
+      }
+    },
+    {
+      "platform": "twitter",
+      "totalFollowers": 1044,
+      "newTodayFollowers": 99,
+      "overview": {
+        "today" : {
+          "retweets": 117,
+          "likes": 507
+        }
+      }
+    },
+    {
+      "platform": "instagram",
+      "totalFollowers": 11000,
+      "newTodayFollowers": 1099,
+      "overview": {
+        "today" : {
+          "profileViews": 52000,
+          "likes": 5462
+        }
+      }
+    },
+    { 
+      "platform": "youtube",
+      "totalFollowers": 8239,
+      "newTodayFollowers": -144,
+      "overview": {
+        "today" : {
+          "totalViews": 1407,
+          "likes": 107
+        }
+      }
+    }
+  ]
+}
