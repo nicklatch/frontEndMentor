@@ -1,16 +1,17 @@
 /* eslint-disable react/prop-types */
-import { icons } from '../../utils';
+import { icons, numberFormatter } from '../../utils';
 
-const OverviewCard = ({ data }) => {
-  console.log('FROM: overviewcard', data);
+const OverviewCard = ({ icon, data }) => {
+  console.log(data);
+
   return (
     <div className='overview__card card-rounded '>
       <section>
-        <h4>Page Views</h4>
-        <img src={icons[data.platform]} alt={`${data.platform}'s logo`} />
+        <h4>{String(Object.keys(data))}</h4>
+        <img src={icons[icon]} alt={`${data.platform}'s logo`} />
       </section>
       <section>
-        <p>87</p>
+        <p>{numberFormatter(Object.values(data))}</p>
         <p>^3%</p>
       </section>
     </div>

@@ -6,18 +6,8 @@
       "totalFollowers": 1987,
       "newTodayFollowers": 12,
       "overview": {
-        "today": { "pageViews": 87, "likes": 52 },
-        "yesterday": { "pageViews": 84, "likes": 54 }
-      }
-    },
-    {
-      "platform": "twitter",
-      "handle": "@nathanf",
-      "totalFollowers": 1044,
-      "newTodayFollowers": 99,
-      "overview": {
-        "today": { "retweets": 117, "likes": 507 },
-        "yesterday": { "pageViews": 84, "likes": 54 }
+        "today": [{ "Page Views": 87 }, { "Likes": 52 }],
+        "yesterday": [{ "pageViews": 84 }, { "likes": 54 }]
       }
     },
     {
@@ -26,8 +16,18 @@
       "totalFollowers": 11000,
       "newTodayFollowers": 1099,
       "overview": {
-        "today": { "profileViews": 52000, "likes": 5462 },
-        "yesterday": { "pageViews": 84, "likes": 54 }
+        "today": [{ "Profile Views": 52000 }, { "Likes": 5462 }],
+        "yesterday": [{ "pageViews": 84 }, { "likes": 54 }]
+      }
+    },
+    {
+      "platform": "twitter",
+      "handle": "@nathanf",
+      "totalFollowers": 1044,
+      "newTodayFollowers": 99,
+      "overview": {
+        "today": [{ "Likes": 507 }, { "Retweets": 117 }],
+        "yesterday": [{ "pageViews": 84 }, { "likes": 54 }]
       }
     },
     {
@@ -36,8 +36,8 @@
       "totalFollowers": 8239,
       "newTodayFollowers": -144,
       "overview": {
-        "today": { "totalViews": 1407, "likes": 107 },
-        "yesterday": { "pageViews": 84, "likes": 54 }
+        "today": [{ "Likes": 107 }, { "Total Views": 1407 }],
+        "yesterday": [{ "pageViews": 84, "likes": 54 }]
       }
     }
   ]

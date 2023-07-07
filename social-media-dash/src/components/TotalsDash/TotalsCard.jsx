@@ -1,6 +1,5 @@
 import { icons, numberFormatter } from '../../utils';
-const TotalsCard = ({ data }) => {
-  console.log(data);
+const TotalsCard = ({ icon, data }) => {
   return (
     <>
       <div className={`totals__card-border-${data.platform}`}>
