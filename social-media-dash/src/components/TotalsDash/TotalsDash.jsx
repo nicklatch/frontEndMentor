@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import TotalsCard from './TotalsCard';
 
 const TotalsDash = ({ data }) => {

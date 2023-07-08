@@ -2,10 +2,8 @@
 import { icons, numberFormatter } from '../../utils';
 
 const OverviewCard = ({ icon, data }) => {
-  console.log(data);
-
   return (
-    <div className='overview__card card-rounded '>
+    <div className="overview__card card-rounded ">
       <section>
         <h4>{String(Object.keys(data))}</h4>
         <img src={icons[icon]} alt={`${data.platform}'s logo`} />

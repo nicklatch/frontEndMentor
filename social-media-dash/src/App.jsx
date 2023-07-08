@@ -15,7 +15,7 @@ const App = () => {
   }, [userData, dataService]);
 
   return !userData ? (
-    <div className='loading'>Loading...</div>
+    <div className="loading">Loading...</div>
   ) : (
     <>
       <Header total={parseAndReduce(userData)} />

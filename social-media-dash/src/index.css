@@ -70,10 +70,11 @@ html {
 }
 
 body {
-  max-width: 100vw;
+  max-width: max(100vw, 1440px);
   min-height: 100vh;
   padding-inline: 10vw;
   padding-block: 2.5rem;
+  margin: auto;
 }
 
 header {
@@ -129,7 +130,6 @@ svg {
   background-color: var(--dt-dark-desaturated-blue-card-bg);
   grid-column: span 1;
   aspect-ratio: 1.21;
-  max-height: 13.75rem;
   padding-block: 1.5rem;
 }
 
@@ -152,7 +152,6 @@ svg {
   background-image: var(--primary-instagram-gradient);
   border-radius: 0.5rem;
   border-top: 4px solid transparent;
-  max-height: 13.75rem;
   aspect-ratio: 1.2;
 }
 

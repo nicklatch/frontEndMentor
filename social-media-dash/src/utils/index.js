@@ -23,6 +23,5 @@ export const parseAndReduce = (arr) => {
 
 export const numberFormatter = (inputNum) => {
   const num = String(inputNum).split('');
-  console.log(num[0], num[1]);
   return num.length > 4 ? `${num[0]}${num[1]}k` : `${num.join('')}`;
 };

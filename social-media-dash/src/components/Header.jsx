@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 // TODO: implement toggle for light/dark
-
 const Header = ({ total }) => {
   return (
     <header>
@@ -13,5 +13,7 @@ const Header = ({ total }) => {
     </header>
   );
 };
+
+Header.propTypes = {};
 
 export default Header;
