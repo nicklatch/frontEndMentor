@@ -1,5 +1,6 @@
 import { icons, numberFormatter } from '../../utils';
 import PropTypes from 'prop-types';
+import UpDown from '../UpDown.jsx';
 const TotalsCard = ({ data }) => {
   return (
     <>
@@ -13,12 +14,7 @@ const TotalsCard = ({ data }) => {
             <p>{numberFormatter(Number(data.totalFollowers))}</p>
             <p>FOLLOWERS</p>
           </section>
-          <section className="totals__card-dif">
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4">
-              <path fill="#1EB589" fillRule="evenodd" d="M0 4l4-4 4 4z" />
-            </svg>
-            <p>12 Today</p>
-          </section>
+          <UpDown data={data.newTodayFollowers} message=" Today" />
         </div>
       </div>
     </>

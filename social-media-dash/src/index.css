@@ -31,7 +31,9 @@
   );
   --primary-youtube-color: hsl(348, 97%, 39%);
   --primary-toggle-dark-gradient: linear-gradient(
-    hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+    to top right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
   );
   --primary-toggle-light-color: hsl(230, 22%, 74%);
 
@@ -49,13 +51,6 @@
   --lt-dark-grayish-blue-text: hsl(228, 12%, 44%);
   --lt-very-dark-blue-text: hsl(230, 17%, 14%);
 }
-
-/* 
-//TODO: Create boiler plate
-Mobile width - 375px
- - padding-inline will be 25px 
-
-*/
 
 html {
   box-sizing: border-box;
@@ -112,6 +107,57 @@ img,
 svg {
   max-width: 100%;
   display: block;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: var(--primary-toggle-dark-gradient);
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  &:before,
+  &:after {
+    content: '';
+  }
+  &:before {
+    display: block;
+    background: var(--dt-very-dark-blue-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .toggle-checkbox:checked + & {
+    background: var(--primary-toggle-dark-gradient);
+    &:before {
+      left: 30px;
+    }
+  }
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.toggle-label {
+  margin-inline: 1ch;
+  position: relative;
+  top: 2px;
 }
 
 .totals__dash-grid,
@@ -190,12 +236,23 @@ svg {
   letter-spacing: 0.5ch;
 }
 
-.totals__card-dif {
+.totals__card-diff {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--primary-lime-green);
   font-size: 14px;
+}
+
+.diff-up {
+  color: var(--primary-lime-green);
+}
+
+.diff-down {
+  color: var(--primary-red);
+}
+
+.keep-that-arrow-away-from-me {
+  padding-left: 1ch;
 }
 
 .totals__card-dif > svg {
@@ -215,6 +272,10 @@ svg {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.overview__card > section h4 {
+  opacity: 0.75;
 }
 
 .overview__card > section:first-child {

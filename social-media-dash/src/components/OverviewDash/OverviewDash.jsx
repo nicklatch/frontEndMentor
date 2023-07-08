@@ -9,7 +9,7 @@ const OverviewDash = ({ data }) => {
           <OverviewCard
             key={Math.random() * 10000}
             icon={card.platform}
-            data={ele}
+            today={ele}
           />
         ));
       })}

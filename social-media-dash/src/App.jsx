@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import OverviewDash from './components/OverviewDash/OverviewDash';
 import TotalsDash from './components/TotalsDash/TotalsDash';
 import { useResource } from './hooks';
