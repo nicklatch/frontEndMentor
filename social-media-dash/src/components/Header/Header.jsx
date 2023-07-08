@@ -4,13 +4,13 @@ import Toggle from './Toggle';
 const Header = ({ total }) => {
   return (
     <header>
-      <div>
+      <div className="header__title">
         <h1>Social Media Dashboard</h1>
+        <p>Total Followers: {total.toLocaleString()}</p>
+      </div>
+      <div>
         <Toggle />
       </div>
-      <span>
-        <p>Total Followers: {total.toLocaleString()}</p>
-      </span>
     </header>
   );
 };

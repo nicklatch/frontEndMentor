@@ -1,3 +1,5 @@
+@import 'open-props/style';
+
 :root {
   font-family: Inter, system-ui, sans-serif;
   line-height: 1.5;
@@ -52,6 +54,11 @@
   --lt-very-dark-blue-text: hsl(230, 17%, 14%);
 }
 
+.dark__root {
+  background-color: var(--lt-light-white-bg);
+  color: black;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -73,14 +80,10 @@ body {
 }
 
 header {
-  margin-block-end: 2rem;
-  line-height: 1.2;
-}
-
-header > div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-block-end: 2rem;
+  line-height: 1.2;
 }
 
 main,
@@ -143,7 +146,7 @@ svg {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
   }
   .toggle-checkbox:checked + & {
-    background: var(--primary-toggle-dark-gradient);
+    background: hsl(225, 100%, 98%);
     &:before {
       left: 30px;
     }
@@ -296,4 +299,46 @@ svg {
 
 .card-rounded {
   border-radius: 0.25rem;
+}
+
+@media (max-width: 950px) {
+  .totals__dash-grid,
+  .overview__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .totals__card,
+  .totals__card-border-instagram {
+    aspect-ratio: 1.5;
+  }
+  .overview__card {
+    aspect-ratio: 2.6;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__title {
+    border-bottom: 1px white solid;
+  }
+
+  .header__title > p {
+    padding-bottom: 1rem;
+  }
+
+  header > div:last-child {
+    width: 100%;
+  }
+
+  .toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .toggle-label {
+    margin-inline: 0;
+  }
 }

@@ -1,16 +1,23 @@
+import { useState } from 'react';
+
 const Toggle = () => {
-  const leToggle = document.getElementsByClassName('toggle-checkbox');
-  console.log(leToggle);
+  const [darkTheme, setDarkTheme] = useState('dark');
+  const dark = document.querySelector('html');
+
+  const handleToggle = () => {
+    setDarkTheme('light');
+    console.log(dark);
+  };
 
   return (
     <label className="toggle">
-      <span className="toggle-label">Dark Mode{'  '}</span>
+      <span className="toggle-label">Dark Mode</span>
       <input
         className="toggle-checkbox"
         type="checkbox"
-        onChange={() => console.log('switched')}
+        onChange={handleToggle}
       />
-      <div className="toggle-switch"></div>
+      <div className="toggle-switch "></div>
     </label>
   );
 };
