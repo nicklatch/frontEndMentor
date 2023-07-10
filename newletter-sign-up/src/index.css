@@ -80,3 +80,9 @@ main {
 .newsletter__graphic {
   width: 50%;
 }
+
+.graphic {
+  height: 100%;
+  border-radius: 1rem;
+  background: var(--primary-tomato);
+}

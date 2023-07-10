@@ -1,5 +1,5 @@
 const Graphic = () => {
-  return <div>Graphic</div>;
+  return <div className='graphic'>Graphic</div>;
 };
 
 export default Graphic;
