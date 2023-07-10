@@ -3,17 +3,12 @@
 :root {
   font-family: Inter, system-ui, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   --bold-font: 700;
   --opacity: 0.75;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(
-    to bottom,
-    var(--dt-very-dark-blue-top-bg-pattern) 30%,
-    var(--dt-very-dark-blue-bg) 10% 100%
-  );
+  color: var(--text);
+  background: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -39,28 +34,56 @@
   );
   --primary-toggle-light-color: hsl(230, 22%, 74%);
 
-  /* Neutral Color Vars */
   /* - DARK THEME - */
-  --dt-very-dark-blue-bg: hsl(230, 17%, 14%);
-  --dt-very-dark-blue-top-bg-pattern: hsl(232, 19%, 15%);
-  --dt-dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
-  --dt-desaturated-blue-text: hsl(228, 34%, 66%);
-
-  /* - LIGHT THEME - */
-  --lt-light-white-bg: hsl(0, 0%, 100%);
-  --lt-very-pale-blue-top-bg-pattern: hsl(225, 100%, 98%);
-  --lt-light-grayish-blue-card-bg: hsl(227, 47%, 96%);
+  --bg: linear-gradient(
+    to bottom,
+    hsl(230, 17%, 14%) 30%,
+    hsl(232, 19%, 15%) 10% 100%
+  );
+  --card-bg: hsl(228, 28%, 20%);
+  --card-bg-hover: hsl(228, 28%, 30%);
+  --text: rgba(255, 255, 255, 0.87);
+  --card-text: hsl(228, 34%, 66%);
+  --toggle-button: hsl(232, 19%, 15%);
+  --toggle-bg: linear-gradient(
+    to top right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  /*-LIGHTTHEME-*/
+  --lt-bg: linear-gradient(
+    to bottom,
+    hsl(225, 100%, 98%) 30%,
+    hsl(0, 0%, 100%) 10% 100%
+  );
+  --lt-card-bg: hsl(227, 47%, 96%);
   --lt-dark-grayish-blue-text: hsl(228, 12%, 44%);
   --lt-very-dark-blue-text: hsl(230, 17%, 14%);
 }
 
-.dark__root {
-  background-color: var(--lt-light-white-bg);
-  color: black;
-}
-
 html {
   box-sizing: border-box;
+}
+
+html[class='light'] {
+  color: var(--lt-very-dark-blue-text);
+
+  & .overview__card,
+  .totals__card {
+    filter: drop-shadow(0 0 0.4ch grey);
+  }
+
+  --bg: linear-gradient(
+    to bottom,
+    hsl(225, 100%, 98%) 30%,
+    hsl(0, 0%, 100%) 10% 100%
+  );
+  --card-bg: hsl(227, 47%, 96%);
+  --card-bg-hover: hsl(227, 47%, 90%);
+  --text: hsl(230, 17%, 14%);
+  --card-text: hsl(228, 12%, 44%);
+  --toggle-button: hsl(225, 100%, 98%);
+  --toggle-bg: grey;
 }
 
 *,
@@ -94,7 +117,7 @@ header {
 
 header p {
   font-size: 14px;
-  color: var(--dt-desaturated-blue-text);
+  color: var(--card-text);
 }
 
 h1 {
@@ -119,7 +142,7 @@ svg {
 
 .toggle-switch {
   display: inline-block;
-  background: var(--primary-toggle-dark-gradient);
+  background: var(--toggle-bg);
   border-radius: 16px;
   width: 58px;
   height: 32px;
@@ -132,7 +155,7 @@ svg {
   }
   &:before {
     display: block;
-    background: var(--dt-very-dark-blue-bg);
+    background: var(--toggle-button);
     border-radius: 50%;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
     width: 24px;
@@ -146,7 +169,7 @@ svg {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
   }
   .toggle-checkbox:checked + & {
-    background: hsl(225, 100%, 98%);
+    background: var(--toggle-bg);
     &:before {
       left: 30px;
     }
@@ -177,7 +200,7 @@ svg {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--dt-dark-desaturated-blue-card-bg);
+  background-color: var(--card-bg);
   grid-column: span 1;
   aspect-ratio: 1.21;
   padding-block: 1.5rem;
@@ -217,7 +240,7 @@ svg {
 }
 
 .totals__card-handle > p {
-  color: var(--dt-desaturated-blue-text);
+  color: var(--card-text);
   font-size: 14px;
 }
 
@@ -236,7 +259,7 @@ svg {
 }
 
 .totals__card-followers p:last-child {
-  color: var(--dt-desaturated-blue-text);
+  color: var(--card-text);
   letter-spacing: 0.5ch;
 }
 
@@ -269,7 +292,7 @@ svg {
   flex-direction: column;
   padding: 1.5rem;
   aspect-ratio: 2;
-  background-color: var(--dt-dark-desaturated-blue-card-bg);
+  background-color: var(--card-bg);
 }
 
 .overview__card > section {
@@ -279,7 +302,7 @@ svg {
 }
 
 .overview__card > section h4 {
-  color: var(--dt-desaturated-blue-text);
+  color: var(--card-text);
 }
 
 .overview__card > section:first-child {
@@ -296,6 +319,12 @@ svg {
 .overview__card > section:last-child p:first-child {
   font-size: 2rem;
   font-weight: var(--bold-font);
+}
+
+.totals__card:hover,
+.overview__card:hover {
+  cursor: pointer;
+  background-color: var(--card-bg-hover);
 }
 
 .card-rounded {
@@ -335,7 +364,7 @@ svg {
   }
 
   .header__title {
-    border-bottom: 1px white solid;
+    border-bottom: 1px solid var(--text);
   }
 
   .header__title > p {
