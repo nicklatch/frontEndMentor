@@ -94,7 +94,7 @@ header {
 
 header p {
   font-size: 14px;
-  opacity: var(--opacity);
+  color: var(--dt-desaturated-blue-text);
 }
 
 h1 {
@@ -169,6 +169,7 @@ svg {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-block-end: 2rem;
+  place-content: center center;
 }
 
 .totals__card {
@@ -216,7 +217,7 @@ svg {
 }
 
 .totals__card-handle > p {
-  opacity: var(--opacity);
+  color: var(--dt-desaturated-blue-text);
   font-size: 14px;
 }
 
@@ -235,7 +236,7 @@ svg {
 }
 
 .totals__card-followers p:last-child {
-  opacity: var(--opacity);
+  color: var(--dt-desaturated-blue-text);
   letter-spacing: 0.5ch;
 }
 
@@ -278,7 +279,7 @@ svg {
 }
 
 .overview__card > section h4 {
-  opacity: 0.75;
+  color: var(--dt-desaturated-blue-text);
 }
 
 .overview__card > section:first-child {
@@ -301,22 +302,36 @@ svg {
   border-radius: 0.25rem;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 930px) {
+  .overview__card {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 815px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
   .totals__dash-grid,
   .overview__grid {
     display: flex;
     flex-direction: column;
   }
+
   .totals__card,
   .totals__card-border-instagram {
     aspect-ratio: 1.5;
   }
+
   .overview__card {
     aspect-ratio: 2.6;
-  }
-  header {
-    display: flex;
-    flex-direction: column;
+    padding: 1.5rem;
   }
 
   .header__title {
